@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - scrollBackground
+  - AmmunitionPosition
   layers:
   - Default
   - TransparentFX
@@ -44,6 +45,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1730882845
+    locked: 0
+  - name: Ammunition
+    uniqueID: 105397429
     locked: 0
   - name: SpaceShip
     uniqueID: 114643569
