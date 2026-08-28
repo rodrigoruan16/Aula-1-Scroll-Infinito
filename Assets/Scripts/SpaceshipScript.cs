@@ -17,6 +17,8 @@ public class SpaceshipScript : MonoBehaviour
     [SerializeField]
     float intervalBetweenAttack;
 
+    bool attackBtnPressed = false;
+
     void Movimentar()
     {
         _rb.linearVelocityX = _xDir * xSpeed * Time.deltaTime;
@@ -38,17 +40,23 @@ public class SpaceshipScript : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
     }
 
-    public void OnAttack()
+    public void Atirar()
     {
         float currentTime = Time.time;
 
-        if (Math.Abs(timeLastAttack - currentTime) >= intervalBetweenAttack)
+        if ((currentTime - timeLastAttack) >= intervalBetweenAttack)
         {
             Instantiate(ammunitionPrefab, transform.GetChild(0).position, Quaternion.identity);
             timeLastAttack = currentTime;
         }
 
     }
+
+    public void OnAttack(InputValue inputValue)
+    {
+        attackBtnPressed = inputValue.isPressed;
+    }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,6 +66,7 @@ public class SpaceshipScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (attackBtnPressed)
+            Atirar();
     }
 }
