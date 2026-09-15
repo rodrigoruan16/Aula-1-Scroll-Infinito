@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8887820109210673246}
   - component: {fileID: 185444626000961148}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 7006192324630406268}
   - component: {fileID: 4794799360096396122}
   - component: {fileID: 3880907568417663311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AsteroidScript
   speedY: 5
   ExplosionVFX: {fileID: 5485706410211068672, guid: 50c0981fccac7374cb990062df2d5ba2, type: 3}
+  clip: {fileID: 8300000, guid: 6a26d9813642031578ee843f6a77d84e, type: 3}
 --- !u!50 &3880907568417663311
 Rigidbody2D:
   serializedVersion: 5
@@ -177,7 +178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6651055762481141553}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

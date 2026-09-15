@@ -10,12 +10,17 @@ public class AsteroidScript : MonoBehaviour
     [SerializeField]
     GameObject ExplosionVFX;
 
+    [SerializeField]
+    AudioClip clip;
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Destrói o asteróide 
         GameObject explosion = Instantiate(ExplosionVFX, transform.position, Quaternion.identity);
+
+        if (other.transform.tag != "Shredder")
+            AudioSource.PlayClipAtPoint(clip, transform.position);
+
         Destroy(transform.gameObject);
-        Destroy(other.transform.parent.gameObject);
         Destroy(explosion, 0.5f);
     }
 

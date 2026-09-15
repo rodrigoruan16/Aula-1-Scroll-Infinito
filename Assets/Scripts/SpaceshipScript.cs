@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SpaceshipScript : MonoBehaviour
 {
@@ -18,6 +20,18 @@ public class SpaceshipScript : MonoBehaviour
     float intervalBetweenAttack;
 
     bool attackBtnPressed = false;
+
+    [SerializeField]
+    Slider spaceshipHpSlider;
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        spaceshipHpSlider.value += 0.2f;
+        if (spaceshipHpSlider.value >= 1f)
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+    }
 
     void Movimentar()
     {
