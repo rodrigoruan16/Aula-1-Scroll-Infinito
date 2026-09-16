@@ -1,3 +1,10 @@
+# Atividade 4
+
+
+https://github.com/user-attachments/assets/cf0d4973-41c7-4b6e-b706-3a68eb5298a2
+
+
+
 # Atividade 3
 
 Extra: Adicionado shredder embaixo da nave para remover asteróides que passam pela nave. Também foi adicionado código para destruir a munição quando ela colide com o asteróide.
